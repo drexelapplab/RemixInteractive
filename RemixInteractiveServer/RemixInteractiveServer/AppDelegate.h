@@ -13,7 +13,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
-    IBOutlet ColorGridView* lightingPreview;
+    
 }
 
 
@@ -22,7 +22,7 @@
 @property (strong, nonatomic) SocketIO *socketConnection;
 @property (strong, nonatomic) NSTimer *connectionTimer;
 @property (nonatomic)         NSArray* currentDisplay;
-
+@property (strong, nonatomic) IBOutlet ColorGridView* lightingPreview;
 //@property (nonatomic,strong) IBOutlet MasterViewController *masterViewController;
 @property (assign) IBOutlet NSWindow *window;
 

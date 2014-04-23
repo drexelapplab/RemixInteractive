@@ -10,4 +10,18 @@
 
 @implementation ShittyColor
 
+-(id)initWithRed:(float)r green:(float)g blue:(float)b alpha:(float)a
+{
+    self = [super init];
+    if (self)
+    {
+        _red = r;
+        _green = g;
+        _blue = b;
+        _alpha = a;
+    }
+    return self;
+}
+
+
 @end

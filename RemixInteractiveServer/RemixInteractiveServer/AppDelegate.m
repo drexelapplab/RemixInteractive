@@ -11,7 +11,7 @@
 @implementation AppDelegate
 
 //@synthesize connectionTimer,currentDisplay,socketConnection;
-
+@synthesize lightingPreview;
 NSString* hostname = @"54.186.206.127";
 int dataCnt;
 int kPort = 4444;
@@ -24,7 +24,8 @@ int kPort = 4444;
     [lightingPreview setupWithGridWidth:4 withGridHeight:4];
     
     _socketConnection = [[SocketIO alloc] initWithDelegate:self];
-    [_socketConnection connectToHost:hostname onPort:kPort withParams:nil withNamespace:@"/ios"];
+    _connectionTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tryToReconnect) userInfo:nil repeats:YES];
+    
     dataCnt = 0;
     
 }
@@ -87,7 +88,7 @@ int kPort = 4444;
     if(!_socketConnection.isConnected)
     {
         NSLog(@"Trying to connect...");
-        [_socketConnection connectToHost:hostname onPort:3333 withParams:nil withNamespace:@"/ios"];
+        [_socketConnection connectToHost:hostname onPort:kPort withParams:nil withNamespace:@"/ios"];
     }
     else
     {
@@ -106,22 +107,28 @@ int kPort = 4444;
     
     NSString* messageStr = args[0];
     
-    NSMutableArray* rgbValues = (NSMutableArray*)[messageStr componentsSeparatedByString:@"}{"];
-    [rgbValues replaceObjectAtIndex:0 withObject:[[rgbValues objectAtIndex:0] substringFromIndex:1]];
-    [rgbValues replaceObjectAtIndex:([rgbValues count]-1) withObject:[[rgbValues objectAtIndex:([rgbValues count]-1)] substringToIndex:( [[rgbValues objectAtIndex:([rgbValues count]-1)] length]-1 )]];
-    
-    
-    for(int i=0;i<[rgbValues count];i++)
+    if(![messageStr isEqual:@""])
     {
-        NSString* singleRGB = [rgbValues objectAtIndex:i];
-        NSArray* colorVals = [singleRGB componentsSeparatedByString:@","];
-        float r = [[colorVals objectAtIndex:0] floatValue];
-        float g = [[colorVals objectAtIndex:1] floatValue];
-        float b = [[colorVals objectAtIndex:2] floatValue];
-        float a = [[colorVals objectAtIndex:3] floatValue];
+        NSMutableArray* rgbValues = (NSMutableArray*)[messageStr componentsSeparatedByString:@"}{"];
+        [rgbValues replaceObjectAtIndex:0 withObject:[[rgbValues objectAtIndex:0] substringFromIndex:1]];
+        [rgbValues replaceObjectAtIndex:([rgbValues count]-1) withObject:[[rgbValues objectAtIndex:([rgbValues count]-1)] substringToIndex:( [[rgbValues objectAtIndex:([rgbValues count]-1)] length]-1 )]];
         
-        [lightingPreview sendColorToComponent:i withRed:r withGreen:g withBlue:b withAlpha:a];
+        
+        for(int i=0;i<[rgbValues count];i++)
+        {
+            NSString* singleRGB = [rgbValues objectAtIndex:i];
+            NSArray* colorVals = [singleRGB componentsSeparatedByString:@","];
+            float r = [[colorVals objectAtIndex:0] floatValue];
+            float g = [[colorVals objectAtIndex:1] floatValue];
+            float b = [[colorVals objectAtIndex:2] floatValue];
+            float a = [[colorVals objectAtIndex:3] floatValue];
+            
+            [lightingPreview sendColorToComponent:i withRed:r withGreen:g withBlue:b withAlpha:a];
+        }
+        
+            
     }
+    
     
     
     

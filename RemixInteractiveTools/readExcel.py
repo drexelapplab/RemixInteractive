@@ -55,7 +55,7 @@ for n in range(0,book.nsheets):
 		for j in range(0,4):
 			print i, j
 			if(i>=sh.nrows or j>=sh.ncols):
-				cIndex = 2 #white
+				cIndex = 0 #black
 			else:
 				cell = sh.cell(i,j)
 				bookXFList= book.xf_list

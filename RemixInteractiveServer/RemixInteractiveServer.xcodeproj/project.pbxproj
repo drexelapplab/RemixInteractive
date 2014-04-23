@@ -33,11 +33,25 @@
 		E714A27C18FF0EE700D4BCB8 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = E714A26918FF0EE700D4BCB8 /* base64.c */; };
 		E714A27D18FF0EE700D4BCB8 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E714A26C18FF0EE700D4BCB8 /* NSData+SRB64Additions.m */; };
 		E714A27E18FF0EE700D4BCB8 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E714A26F18FF0EE700D4BCB8 /* SRWebSocket.m */; };
-		E714A2B118FF1BA400D4BCB8 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E714A2AC18FF1B9C00D4BCB8 /* SocketRocket.framework */; };
-		E714A2B318FF1BDF00D4BCB8 /* SocketRocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E714A2AC18FF1B9C00D4BCB8 /* SocketRocket.framework */; };
 		E714A2B61900123600D4BCB8 /* ColorGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E714A2B51900123600D4BCB8 /* ColorGridView.m */; };
 		E714A2B91900172B00D4BCB8 /* ColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E714A2B81900172B00D4BCB8 /* ColorView.m */; };
 		E714A2C619003A0700D4BCB8 /* InterfaceControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E714A2C519003A0700D4BCB8 /* InterfaceControl.m */; };
+		E7BFBF531906B01D006F4323 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFBF4E1906AFF2006F4323 /* SocketRocket.framework */; };
+		E7BFBF561906F824006F4323 /* LightingCue.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BFBF551906F824006F4323 /* LightingCue.m */; };
+		E7BFBF591906FD87006F4323 /* ShittyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BFBF581906FD87006F4323 /* ShittyColor.m */; };
+		E7BFBF5F19073265006F4323 /* black-background-metal-texture-wallpaper-800x600.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF5E19073265006F4323 /* black-background-metal-texture-wallpaper-800x600.jpg */; };
+		E7BFBF611907331A006F4323 /* 800x600.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF601907331A006F4323 /* 800x600.jpg */; };
+		E7BFBF6D19073F35006F4323 /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6219073F35006F4323 /* Black.png */; };
+		E7BFBF6E19073F35006F4323 /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6319073F35006F4323 /* Blue.png */; };
+		E7BFBF6F19073F35006F4323 /* Cyan.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6419073F35006F4323 /* Cyan.png */; };
+		E7BFBF7019073F35006F4323 /* Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6519073F35006F4323 /* Gray.png */; };
+		E7BFBF7119073F35006F4323 /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6619073F35006F4323 /* Green.png */; };
+		E7BFBF7219073F35006F4323 /* Magenta.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6719073F35006F4323 /* Magenta.png */; };
+		E7BFBF7319073F35006F4323 /* Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6819073F35006F4323 /* Orange.png */; };
+		E7BFBF7419073F35006F4323 /* Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6919073F35006F4323 /* Purple.png */; };
+		E7BFBF7519073F35006F4323 /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6A19073F35006F4323 /* Red.png */; };
+		E7BFBF7619073F35006F4323 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6B19073F35006F4323 /* White.png */; };
+		E7BFBF7719073F35006F4323 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6C19073F35006F4323 /* Yellow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,30 +62,30 @@
 			remoteGlobalIDString = E714A21318FF0E7700D4BCB8;
 			remoteInfo = RemixInteractiveServer;
 		};
-		E714A2A918FF1B9C00D4BCB8 /* PBXContainerItemProxy */ = {
+		E7BFBF4B1906AFF2006F4323 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E714A2A218FF1B9C00D4BCB8 /* SocketRocket.xcodeproj */;
+			containerPortal = E7BFBF441906AFF2006F4323 /* SocketRocket.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F6B2082D1450F597009315AF;
 			remoteInfo = SocketRocket;
 		};
-		E714A2AB18FF1B9C00D4BCB8 /* PBXContainerItemProxy */ = {
+		E7BFBF4D1906AFF2006F4323 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E714A2A218FF1B9C00D4BCB8 /* SocketRocket.xcodeproj */;
+			containerPortal = E7BFBF441906AFF2006F4323 /* SocketRocket.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F668C880153E91210044DBAC;
 			remoteInfo = SocketRocketOSX;
 		};
-		E714A2AD18FF1B9C00D4BCB8 /* PBXContainerItemProxy */ = {
+		E7BFBF4F1906AFF2006F4323 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E714A2A218FF1B9C00D4BCB8 /* SocketRocket.xcodeproj */;
+			containerPortal = E7BFBF441906AFF2006F4323 /* SocketRocket.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F6BDA802145900D200FE3253;
 			remoteInfo = SRWebSocketTests;
 		};
-		E714A2AF18FF1B9C00D4BCB8 /* PBXContainerItemProxy */ = {
+		E7BFBF511906AFF2006F4323 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E714A2A218FF1B9C00D4BCB8 /* SocketRocket.xcodeproj */;
+			containerPortal = E7BFBF441906AFF2006F4323 /* SocketRocket.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F62417E314D52F3C003CE997;
 			remoteInfo = TestChat;
@@ -85,7 +99,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E714A2B318FF1BDF00D4BCB8 /* SocketRocket.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,13 +157,30 @@
 		E714A26D18FF0EE700D4BCB8 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
 		E714A26E18FF0EE700D4BCB8 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		E714A26F18FF0EE700D4BCB8 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
-		E714A2A218FF1B9C00D4BCB8 /* SocketRocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SocketRocket.xcodeproj; path = "../SocketRocket-master/SocketRocket.xcodeproj"; sourceTree = "<group>"; };
 		E714A2B41900123600D4BCB8 /* ColorGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorGridView.h; sourceTree = "<group>"; };
 		E714A2B51900123600D4BCB8 /* ColorGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorGridView.m; sourceTree = "<group>"; };
 		E714A2B71900172B00D4BCB8 /* ColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorView.h; sourceTree = "<group>"; };
 		E714A2B81900172B00D4BCB8 /* ColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorView.m; sourceTree = "<group>"; };
 		E714A2C419003A0700D4BCB8 /* InterfaceControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceControl.h; sourceTree = "<group>"; };
 		E714A2C519003A0700D4BCB8 /* InterfaceControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceControl.m; sourceTree = "<group>"; };
+		E7BFBF441906AFF2006F4323 /* SocketRocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SocketRocket.xcodeproj; path = "SocketRocket-master/SocketRocket.xcodeproj"; sourceTree = "<group>"; };
+		E7BFBF541906F824006F4323 /* LightingCue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightingCue.h; sourceTree = "<group>"; };
+		E7BFBF551906F824006F4323 /* LightingCue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightingCue.m; sourceTree = "<group>"; };
+		E7BFBF571906FD87006F4323 /* ShittyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShittyColor.h; sourceTree = "<group>"; };
+		E7BFBF581906FD87006F4323 /* ShittyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShittyColor.m; sourceTree = "<group>"; };
+		E7BFBF5E19073265006F4323 /* black-background-metal-texture-wallpaper-800x600.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "black-background-metal-texture-wallpaper-800x600.jpg"; sourceTree = "<group>"; };
+		E7BFBF601907331A006F4323 /* 800x600.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 800x600.jpg; sourceTree = "<group>"; };
+		E7BFBF6219073F35006F4323 /* Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Black.png; sourceTree = "<group>"; };
+		E7BFBF6319073F35006F4323 /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		E7BFBF6419073F35006F4323 /* Cyan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cyan.png; sourceTree = "<group>"; };
+		E7BFBF6519073F35006F4323 /* Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gray.png; sourceTree = "<group>"; };
+		E7BFBF6619073F35006F4323 /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
+		E7BFBF6719073F35006F4323 /* Magenta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Magenta.png; sourceTree = "<group>"; };
+		E7BFBF6819073F35006F4323 /* Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Orange.png; sourceTree = "<group>"; };
+		E7BFBF6919073F35006F4323 /* Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Purple.png; sourceTree = "<group>"; };
+		E7BFBF6A19073F35006F4323 /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
+		E7BFBF6B19073F35006F4323 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
+		E7BFBF6C19073F35006F4323 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E714A2B118FF1BA400D4BCB8 /* SocketRocket.framework in Frameworks */,
+				E7BFBF531906B01D006F4323 /* SocketRocket.framework in Frameworks */,
 				E714A21818FF0E7700D4BCB8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,7 +208,7 @@
 		E714A20B18FF0E7700D4BCB8 = {
 			isa = PBXGroup;
 			children = (
-				E714A2A218FF1B9C00D4BCB8 /* SocketRocket.xcodeproj */,
+				E7BFBF441906AFF2006F4323 /* SocketRocket.xcodeproj */,
 				E714A24B18FF0EE700D4BCB8 /* socket.IO-objc */,
 				E714A21D18FF0E7700D4BCB8 /* RemixInteractiveServer */,
 				E714A23B18FF0E7800D4BCB8 /* RemixInteractiveServerTests */,
@@ -219,16 +249,9 @@
 		E714A21D18FF0E7700D4BCB8 /* RemixInteractiveServer */ = {
 			isa = PBXGroup;
 			children = (
-				E714A22918FF0E7700D4BCB8 /* AppDelegate.h */,
-				E714A22A18FF0E7700D4BCB8 /* AppDelegate.m */,
-				E714A2B71900172B00D4BCB8 /* ColorView.h */,
-				E714A2B81900172B00D4BCB8 /* ColorView.m */,
-				E714A2B41900123600D4BCB8 /* ColorGridView.h */,
-				E714A2B51900123600D4BCB8 /* ColorGridView.m */,
-				E714A2C419003A0700D4BCB8 /* InterfaceControl.h */,
-				E714A2C519003A0700D4BCB8 /* InterfaceControl.m */,
+				E7BFBF5B190705B2006F4323 /* LightingCue */,
+				E7BFBF5A190705A6006F4323 /* Interface */,
 				E714A22F18FF0E7700D4BCB8 /* Images.xcassets */,
-				E714A22C18FF0E7700D4BCB8 /* MainMenu.xib */,
 				E714A21E18FF0E7700D4BCB8 /* Supporting Files */,
 			);
 			path = RemixInteractiveServer;
@@ -237,11 +260,24 @@
 		E714A21E18FF0E7700D4BCB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7BFBF6219073F35006F4323 /* Black.png */,
+				E7BFBF6319073F35006F4323 /* Blue.png */,
+				E7BFBF6419073F35006F4323 /* Cyan.png */,
+				E7BFBF6519073F35006F4323 /* Gray.png */,
+				E7BFBF6619073F35006F4323 /* Green.png */,
+				E7BFBF6719073F35006F4323 /* Magenta.png */,
+				E7BFBF6819073F35006F4323 /* Orange.png */,
+				E7BFBF6919073F35006F4323 /* Purple.png */,
+				E7BFBF6A19073F35006F4323 /* Red.png */,
+				E7BFBF6B19073F35006F4323 /* White.png */,
+				E7BFBF6C19073F35006F4323 /* Yellow.png */,
+				E7BFBF601907331A006F4323 /* 800x600.jpg */,
 				E714A21F18FF0E7700D4BCB8 /* RemixInteractiveServer-Info.plist */,
 				E714A22018FF0E7700D4BCB8 /* InfoPlist.strings */,
 				E714A22318FF0E7700D4BCB8 /* main.m */,
 				E714A22518FF0E7700D4BCB8 /* RemixInteractiveServer-Prefix.pch */,
 				E714A22618FF0E7700D4BCB8 /* Credits.rtf */,
+				E7BFBF5E19073265006F4323 /* black-background-metal-texture-wallpaper-800x600.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -328,15 +364,58 @@
 			path = socketrocket;
 			sourceTree = "<group>";
 		};
-		E714A2A318FF1B9C00D4BCB8 /* Products */ = {
+		E7BFBF451906AFF2006F4323 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E714A2AA18FF1B9C00D4BCB8 /* libSocketRocket.a */,
-				E714A2AC18FF1B9C00D4BCB8 /* SocketRocket.framework */,
-				E714A2AE18FF1B9C00D4BCB8 /* SRWebSocketTests.octest */,
-				E714A2B018FF1B9C00D4BCB8 /* TestChat.app */,
+				E7BFBF4C1906AFF2006F4323 /* libSocketRocket.a */,
+				E7BFBF4E1906AFF2006F4323 /* SocketRocket.framework */,
+				E7BFBF501906AFF2006F4323 /* SRWebSocketTests.octest */,
+				E7BFBF521906AFF2006F4323 /* TestChat.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E7BFBF5A190705A6006F4323 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E7BFBF5D19070641006F4323 /* UI Control */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		E7BFBF5B190705B2006F4323 /* LightingCue */ = {
+			isa = PBXGroup;
+			children = (
+				E7BFBF541906F824006F4323 /* LightingCue.h */,
+				E7BFBF551906F824006F4323 /* LightingCue.m */,
+				E7BFBF571906FD87006F4323 /* ShittyColor.h */,
+				E7BFBF581906FD87006F4323 /* ShittyColor.m */,
+				E7BFBF5C190705E2006F4323 /* Custom UI Components */,
+			);
+			name = LightingCue;
+			sourceTree = "<group>";
+		};
+		E7BFBF5C190705E2006F4323 /* Custom UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				E714A2B41900123600D4BCB8 /* ColorGridView.h */,
+				E714A2B51900123600D4BCB8 /* ColorGridView.m */,
+				E714A2B71900172B00D4BCB8 /* ColorView.h */,
+				E714A2B81900172B00D4BCB8 /* ColorView.m */,
+			);
+			name = "Custom UI Components";
+			sourceTree = "<group>";
+		};
+		E7BFBF5D19070641006F4323 /* UI Control */ = {
+			isa = PBXGroup;
+			children = (
+				E714A22918FF0E7700D4BCB8 /* AppDelegate.h */,
+				E714A22A18FF0E7700D4BCB8 /* AppDelegate.m */,
+				E714A2C419003A0700D4BCB8 /* InterfaceControl.h */,
+				E714A2C519003A0700D4BCB8 /* InterfaceControl.m */,
+				E714A22C18FF0E7700D4BCB8 /* MainMenu.xib */,
+			);
+			name = "UI Control";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,8 +484,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E714A2A318FF1B9C00D4BCB8 /* Products */;
-					ProjectRef = E714A2A218FF1B9C00D4BCB8 /* SocketRocket.xcodeproj */;
+					ProductGroup = E7BFBF451906AFF2006F4323 /* Products */;
+					ProjectRef = E7BFBF441906AFF2006F4323 /* SocketRocket.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -418,32 +497,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E714A2AA18FF1B9C00D4BCB8 /* libSocketRocket.a */ = {
+		E7BFBF4C1906AFF2006F4323 /* libSocketRocket.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libSocketRocket.a;
-			remoteRef = E714A2A918FF1B9C00D4BCB8 /* PBXContainerItemProxy */;
+			remoteRef = E7BFBF4B1906AFF2006F4323 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E714A2AC18FF1B9C00D4BCB8 /* SocketRocket.framework */ = {
+		E7BFBF4E1906AFF2006F4323 /* SocketRocket.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SocketRocket.framework;
-			remoteRef = E714A2AB18FF1B9C00D4BCB8 /* PBXContainerItemProxy */;
+			remoteRef = E7BFBF4D1906AFF2006F4323 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E714A2AE18FF1B9C00D4BCB8 /* SRWebSocketTests.octest */ = {
+		E7BFBF501906AFF2006F4323 /* SRWebSocketTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SRWebSocketTests.octest;
-			remoteRef = E714A2AD18FF1B9C00D4BCB8 /* PBXContainerItemProxy */;
+			remoteRef = E7BFBF4F1906AFF2006F4323 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E714A2B018FF1B9C00D4BCB8 /* TestChat.app */ = {
+		E7BFBF521906AFF2006F4323 /* TestChat.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = TestChat.app;
-			remoteRef = E714A2AF18FF1B9C00D4BCB8 /* PBXContainerItemProxy */;
+			remoteRef = E7BFBF511906AFF2006F4323 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -453,10 +532,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BFBF7719073F35006F4323 /* Yellow.png in Resources */,
+				E7BFBF6F19073F35006F4323 /* Cyan.png in Resources */,
 				E714A22218FF0E7700D4BCB8 /* InfoPlist.strings in Resources */,
+				E7BFBF7319073F35006F4323 /* Orange.png in Resources */,
+				E7BFBF7019073F35006F4323 /* Gray.png in Resources */,
+				E7BFBF7119073F35006F4323 /* Green.png in Resources */,
 				E714A23018FF0E7700D4BCB8 /* Images.xcassets in Resources */,
+				E7BFBF7519073F35006F4323 /* Red.png in Resources */,
+				E7BFBF611907331A006F4323 /* 800x600.jpg in Resources */,
+				E7BFBF6E19073F35006F4323 /* Blue.png in Resources */,
+				E7BFBF7219073F35006F4323 /* Magenta.png in Resources */,
 				E714A22818FF0E7700D4BCB8 /* Credits.rtf in Resources */,
+				E7BFBF6D19073F35006F4323 /* Black.png in Resources */,
+				E7BFBF5F19073265006F4323 /* black-background-metal-texture-wallpaper-800x600.jpg in Resources */,
+				E7BFBF7619073F35006F4323 /* White.png in Resources */,
 				E714A22E18FF0E7700D4BCB8 /* MainMenu.xib in Resources */,
+				E7BFBF7419073F35006F4323 /* Purple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +569,7 @@
 			files = (
 				E714A2B91900172B00D4BCB8 /* ColorView.m in Sources */,
 				E714A27B18FF0EE700D4BCB8 /* SBJson4Writer.m in Sources */,
+				E7BFBF591906FD87006F4323 /* ShittyColor.m in Sources */,
 				E714A27018FF0EE700D4BCB8 /* SocketIO.m in Sources */,
 				E714A22B18FF0E7700D4BCB8 /* AppDelegate.m in Sources */,
 				E714A27518FF0EE700D4BCB8 /* SBJson4Parser.m in Sources */,
@@ -486,6 +579,7 @@
 				E714A27718FF0EE700D4BCB8 /* SBJson4StreamParserState.m in Sources */,
 				E714A27218FF0EE700D4BCB8 /* SocketIOPacket.m in Sources */,
 				E714A27618FF0EE700D4BCB8 /* SBJson4StreamParser.m in Sources */,
+				E7BFBF561906F824006F4323 /* LightingCue.m in Sources */,
 				E714A27D18FF0EE700D4BCB8 /* NSData+SRB64Additions.m in Sources */,
 				E714A22418FF0E7700D4BCB8 /* main.m in Sources */,
 				E714A27918FF0EE700D4BCB8 /* SBJson4StreamWriter.m in Sources */,
