@@ -185,11 +185,14 @@ int cnt;
 }
 -(IBAction)editSaveCue:(id)sender
 {
+    //EDIT The cue in the list.
+    //Update the current file.
+    
     
 }
 -(IBAction)editSaveCurrentCueList:(id)sender
 {
-    
+    // Save the current cues list to a text file.
 }
 
 
