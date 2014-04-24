@@ -671,7 +671,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="800" height="600"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -681,12 +681,61 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="800x600" id="sGr-w3-ExS"/>
                     </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uTp-az-Lzk">
+                        <rect key="frame" x="470" y="413" width="37" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Scale" id="9nK-E7-IaI">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhq-p8-tZv">
+                        <rect key="frame" x="470" y="394" width="41" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Power" id="Mfp-Fq-Omu">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2R-JM-atx">
+                        <rect key="frame" x="511" y="392" width="271" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="5" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="J7o-5f-FSq"/>
+                    </slider>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCP-p4-Kwz">
+                        <rect key="frame" x="470" y="374" width="24" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Tail" id="2Qs-cw-X7W">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tA7-ov-M2i">
+                        <rect key="frame" x="511" y="372" width="271" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="fcd-xa-JWO"/>
+                    </slider>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-Do-Swm">
+                        <rect key="frame" x="511" y="411" width="271" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="200" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="li1-ss-7kF"/>
+                    </slider>
+                    <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67o-Qw-gXB">
+                        <rect key="frame" x="513" y="433" width="267" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <levelIndicatorCell key="cell" alignment="left" maxValue="100" criticalValue="50" numberOfMajorTickMarks="3" numberOfTickMarks="11" levelIndicatorStyle="continuousCapacity" id="8iK-Em-U1w"/>
+                    </levelIndicator>
+                    <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXM-7y-Z4r">
+                        <rect key="frame" x="513" y="487" width="267" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <levelIndicatorCell key="cell" alignment="left" maxValue="100" warningValue="80" criticalValue="90" levelIndicatorStyle="continuousCapacity" id="u3Z-Xg-7uu"/>
+                    </levelIndicator>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LQ4-S5-3OA">
                         <rect key="frame" x="336" y="20" width="80" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Save" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dzj-tZ-0PY">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="editSaveCurrentCueList:" target="gPP-9n-XDf" id="0Xp-lC-gfu"/>
@@ -697,7 +746,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Commit" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yOg-Rh-dZG">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="editSaveCue:" target="gPP-9n-XDf" id="Nki-RZ-FGX"/>
@@ -717,7 +766,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Jump" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b8l-PU-9gc">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="editJumpToDefinedCue:" target="gPP-9n-XDf" id="SM5-nX-HXj"/>
@@ -737,7 +786,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="&lt;" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wJD-7p-GtM">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="editJumpToPreviousCue:" target="gPP-9n-XDf" id="5ST-tr-ROg"/>
@@ -748,7 +797,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title=">" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K5W-23-JLB">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="editJumpToNextCue:" target="gPP-9n-XDf" id="Cxu-fM-riB"/>
@@ -759,7 +808,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Static" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ja1-hu-iGk">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="sendStatic:" target="gPP-9n-XDf" id="Twg-kD-VSQ"/>
@@ -794,25 +843,25 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="smallSquare" title="Init" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ziV-kA-KIE">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="initControl:" target="gPP-9n-XDf" id="Fpk-5L-Gm9"/>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9UL-eJ-VhV">
-                        <rect key="frame" x="18" y="563" width="172" height="19"/>
+                        <rect key="frame" x="18" y="555" width="172" height="36"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Audience Preview" id="SDb-dF-9cQ">
-                            <font key="font" metaFont="system" size="18"/>
+                            <font key="font" size="18" name="AvenirNext-Regular"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owv-al-drH">
-                        <rect key="frame" x="18" y="293" width="141" height="30"/>
+                        <rect key="frame" x="18" y="292" width="141" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Design Pallete" id="D0e-OI-fiv">
-                            <font key="font" metaFont="system" size="18"/>
+                            <font key="font" size="18" name="AvenirNext-Regular"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -869,7 +918,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Flash" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="J4S-vZ-01N">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="sendFlash:" target="gPP-9n-XDf" id="SHz-Ed-4l1"/>
@@ -973,7 +1022,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Off" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GW7-ql-QGB">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="sendOff:" target="gPP-9n-XDf" id="g9y-oQ-mUh"/>
@@ -989,32 +1038,32 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ru-v2-IeA">
-                        <rect key="frame" x="119" y="269" width="40" height="22"/>
+                        <rect key="frame" x="118" y="269" width="42" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="smallSquare" title="All" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ykw-Gr-aUz">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="selectAll:" target="gPP-9n-XDf" id="kgl-U3-K3W"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVc-Qx-Vrh">
-                        <rect key="frame" x="159" y="269" width="40" height="22"/>
+                        <rect key="frame" x="159" y="269" width="42" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="smallSquare" title="None" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xM5-xk-jDp">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="selectNone:" target="gPP-9n-XDf" id="tAk-Dd-ikY"/>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ArP-aL-19b">
-                        <rect key="frame" x="73" y="267" width="45" height="22"/>
+                        <rect key="frame" x="73" y="273" width="45" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select:" id="Fcg-5f-3LA">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1023,17 +1072,25 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Custom" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CS5-HM-8xO">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="sendColor:" target="gPP-9n-XDf" id="NEb-yn-45O"/>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5T0-ah-xkC">
-                        <rect key="frame" x="528" y="293" width="158" height="30"/>
+                        <rect key="frame" x="528" y="292" width="158" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pre-Defined Cues" id="2tD-2A-WpD">
-                            <font key="font" metaFont="system" size="18"/>
+                            <font key="font" size="18" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uNT-8y-XwU">
+                        <rect key="frame" x="469" y="560" width="158" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Audio Input" id="3VE-YE-Z3i">
+                            <font key="font" size="18" name="AvenirNext-Regular"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1042,7 +1099,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Load" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eUa-74-yZj">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="loadCueFile:" target="gPP-9n-XDf" id="qnq-VX-Obb"/>
@@ -1053,7 +1110,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Next" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y6M-5B-45U">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="jumpToNextCue:" target="gPP-9n-XDf" id="W16-xu-9tf"/>
@@ -1064,7 +1121,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Previous" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="o1M-Qd-2OT">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="jumpToPreviousCue:" target="gPP-9n-XDf" id="X8L-fA-2Nh"/>
@@ -1093,7 +1150,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" title="Jump" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qpQ-jT-PEe">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="jumpToDefinedCue:" target="gPP-9n-XDf" id="sjF-GB-M5y"/>
@@ -1104,25 +1161,49 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="smallSquare" title="Start" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fDW-k8-2Md">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="startCues:" target="gPP-9n-XDf" id="jS4-L0-oOv"/>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJX-mg-5gA">
-                        <rect key="frame" x="527" y="191" width="60" height="22"/>
+                        <rect key="frame" x="527" y="194" width="60" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Frame #:" id="Lbv-y7-DyV">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pC-pu-wW4">
+                        <rect key="frame" x="469" y="534" width="38" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CH 1" id="c4T-v8-uDl">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Si-IQ-sI4">
+                        <rect key="frame" x="470" y="484" width="37" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CH 2" id="kNq-8D-FMf">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1A-gO-OX9">
+                        <rect key="frame" x="470" y="438" width="37" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RMS" id="y3b-gw-z38">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAB-L3-7WK">
-                        <rect key="frame" x="663" y="191" width="39" height="22"/>
+                        <rect key="frame" x="663" y="194" width="39" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Time:" id="ZAB-zt-Mfo">
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1149,7 +1230,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="smallSquare" title="Stop" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="r7F-dA-qeB">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="stopCues:" target="gPP-9n-XDf" id="1T2-hq-Dxr"/>
@@ -1160,7 +1241,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="smallSquare" title="Pause" bezelStyle="smallSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aXe-Re-L6L">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" size="14" name="AvenirNext-Regular"/>
                         </buttonCell>
                         <connections>
                             <action selector="pauseCues:" target="gPP-9n-XDf" id="DgM-b4-NI5"/>
@@ -1176,19 +1257,47 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5W-n8-eyw">
-                        <rect key="frame" x="429" y="260" width="57" height="39"/>
+                        <rect key="frame" x="410" y="268" width="95" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Assign Color" id="zDW-oV-GQ9">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Pick Color" id="zDW-oV-GQ9">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZY-oy-yVm">
+                        <rect key="frame" x="513" y="534" width="267" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <levelIndicatorCell key="cell" alignment="left" maxValue="100" warningValue="80" criticalValue="90" levelIndicatorStyle="continuousCapacity" id="YCi-zE-IAS"/>
+                    </levelIndicator>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wzY-qy-jaw">
+                        <rect key="frame" x="511" y="512" width="271" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" sliderType="linear" id="MxU-CM-0MJ"/>
+                    </slider>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apL-eA-Sc7">
+                        <rect key="frame" x="511" y="465" width="271" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" sliderType="linear" id="d9h-Tn-B5f"/>
+                    </slider>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eqw-pW-ukP">
+                        <rect key="frame" x="684" y="554" width="102" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Init Audio" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bMb-dx-Uuw">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="initAudio:" target="gPP-9n-XDf" id="9cg-fJ-yay"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
         <customObject id="gPP-9n-XDf" customClass="InterfaceControl">
             <connections>
                 <outlet property="alphaBox" destination="bag-zg-Kq3" id="Bni-by-Umh"/>
+                <outlet property="audioInitButton" destination="eqw-pW-ukP" id="Tg5-gI-Cgp"/>
+                <outlet property="avgRMSIndicator" destination="67o-Qw-gXB" id="nLL-1w-l79"/>
                 <outlet property="blueBox" destination="owr-5b-p7v" id="jzJ-ot-MZ2"/>
                 <outlet property="colorsView" destination="SMP-le-GSn" id="g5f-z7-CsM"/>
                 <outlet property="editFrameTimeBox" destination="Jsn-ad-X5n" id="dHQ-Jr-Hyz"/>
@@ -1199,8 +1308,15 @@
                 <outlet property="frameTimeBox" destination="1MU-QX-7Et" id="IXH-Kp-J3r"/>
                 <outlet property="greenBox" destination="D3X-Ra-hcZ" id="hyu-cN-vOO"/>
                 <outlet property="jumpToBox" destination="Q1r-PA-VwS" id="289-Uq-0ou"/>
+                <outlet property="levelIndicator1" destination="wZY-oy-yVm" id="gPp-8Y-Fkq"/>
+                <outlet property="levelIndicator2" destination="xXM-7y-Z4r" id="3Ez-2f-K7m"/>
                 <outlet property="loadedFileBox" destination="KCc-gl-W6u" id="kuI-8N-h8T"/>
                 <outlet property="redBox" destination="xbp-jA-e4X" id="aqH-jI-xhc"/>
+                <outlet property="rmsPower" destination="k2R-JM-atx" id="vOq-74-xkO"/>
+                <outlet property="rmsScale" destination="oY1-Do-Swm" id="sws-eJ-0Sf"/>
+                <outlet property="rmsTail" destination="tA7-ov-M2i" id="Iic-JY-vHe"/>
+                <outlet property="volumeSlider1" destination="wzY-qy-jaw" id="lPP-wr-cbO"/>
+                <outlet property="volumeSlider2" destination="apL-eA-Sc7" id="1Mp-FS-TUB"/>
             </connections>
         </customObject>
         <textField verticalHuggingPriority="750" id="5JP-75-xQJ">

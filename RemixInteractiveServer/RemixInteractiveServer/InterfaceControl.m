@@ -187,6 +187,26 @@ int cnt;
 {
     //EDIT The cue in the list.
     //Update the current file.
+    int currentEditCue = [editJumpToBox intValue];
+    NSString* timeCodeStr = [editFrameTimeBox stringValue];
+    NSString* cueString = @"";
+    NSString* fullColorsList = @"";
+    for(ColorView* cv in colorsView.viewList)
+    {
+        float r = cv.color.redComponent;
+        float g = cv.color.greenComponent;
+        float b = cv.color.blueComponent;
+        float a = cv.color.alphaComponent;
+        NSString* jawnStr = [NSString stringWithFormat:@"{%f,%f,%f,%f}",r,g,b,a];
+        fullColorsList = [fullColorsList stringByAppendingString:jawnStr];
+    }
+    
+    cueString = [NSString stringWithFormat:@"%d|%@|%@",currentEditCue,timeCodeStr,fullColorsList];
+    
+    LightingCue* tempCue = [[LightingCue alloc] initWithString:cueString];
+    
+    [lightingCues replaceObjectAtIndex:(currentEditCue-1) withObject:tempCue];
+    
     
     
 }
@@ -493,10 +513,11 @@ int cnt;
 -(void)presentCue:(int)index
 {
     int tempIndex = index-1;
-    if(tempIndex >=[lightingCues count])
-        tempIndex = (int)[lightingCues count]-1;
+    if(tempIndex >=([lightingCues count]-1))
+        tempIndex= ([lightingCues count]-2);
     if(tempIndex<0)
         tempIndex = 0;
+    
     LightingCue* tempCue = [lightingCues objectAtIndex:tempIndex];
     [frameNumBox setStringValue:tempCue.cueTagString];
     
@@ -543,6 +564,24 @@ int cnt;
     [d sendMessage:fullColorsList];
     
 }
+
+-(void)jumpToNextCueManual{
+    if(fileLoaded)
+    {
+        [jumpToBox setIntValue:[jumpToBox intValue]+1];
+        
+        if([jumpToBox intValue]>[lightingCues count])
+        {
+            [jumpToBox setIntValue:(int)[lightingCues count]];
+            
+        }
+        
+        [self presentCue:[jumpToBox intValue]];
+        
+    }
+}
+
+
 
 -(void)checkAndSendNextCue
 {
@@ -683,9 +722,134 @@ int cnt;
     return params;
     
 }
+-(IBAction)initAudio:(id)sender{
+    [self initAudioShit];
+}
+
+
+#pragma mark -
+#pragma mark Audio Shit
+#pragma mark -
+
+
+//AudioShit
+-(void) initAudioShit
+{
+    cycle = 0 ;
+	level1 = level2 = 0 ;
+	manager = [ [ AFManager alloc ] init ] ;
+	
+//	outputSoundcard = [ manager newOutputSoundcard ] ;
+//	[ outputSoundcard setResamplingRate:48000.0 ] ;
+//	[ outputSoundcard setBufferLength:512 ] ;
+    
+	inputSoundcard = [ manager newInputSoundcard ] ;
+	[ inputSoundcard setResamplingRate:44100 ] ;
+	[ inputSoundcard setBufferLength:512 ] ;
+	
+	//	Let the input AFSoundcard manage the volume sliders
+//	[ inputSoundcard setManagedVolumeSlider:volumeSlider0 channel:0 ] ;
+	[ inputSoundcard setManagedVolumeSlider:volumeSlider1 channel:1 ] ;
+	[ inputSoundcard setManagedVolumeSlider:volumeSlider2 channel:2 ] ;
+	[ inputSoundcard setDelegate:self ] ;
+	
+	//	start sampling
+//	[ outputSoundcard start ] ;
+	[ inputSoundcard start ] ;
+    prevJawnFlash = NO;
+}
+
+- (void)updateVUMeter:(NSLevelIndicator*)indicator buffer:(float*)buffer samples:(int)samples
+{
+	float max, v ;
+	int i ;
+    
+	max = 0 ;
+	for ( i = 0; i < samples; i++ ) {
+		v = fabs( buffer[i] ) ;
+		if ( v > max ) max = v ;
+	}
+	if ( indicator == levelIndicator1 ) level1 = v = level1*0.75 + max*0.25 ; else level2 = v = level2*0.75 + max*0.25 ;
+	if ( cycle == 0 ) [ indicator setFloatValue:v*100 ] ;
+}
+
+
+- (void)setRMSMeter:(float)rms
+{
+    float mAvgTail = [rmsTail floatValue];
+    float displayRMS = powf(rms,[rmsPower floatValue])*powf(10, [rmsScale floatValue]/20);
+    prevDisplayRMS = (prevDisplayRMS*((mAvgTail-1)/mAvgTail) + displayRMS*(1.0/mAvgTail));
+	[avgRMSIndicator setFloatValue:prevDisplayRMS];
+    [self doSomethingWithRMS:prevDisplayRMS];
+}
+-(void) doSomethingWithRMS:(float)rmsJawn
+{
+    if(rmsJawn>50 && !prevJawnFlash)
+    {
+        [self jumpToNextCueManual];
+        prevJawnFlash = YES;
+    }
+    
+    if(rmsJawn<50)
+    {
+        prevJawnFlash = NO;
+            
+    }
+    
+}
 
 
 
+- (void)zeroVUMeter:(NSLevelIndicator*)indicator
+{
+	[ indicator setFloatValue:0 ] ;
+	if ( indicator == levelIndicator1 ) level1 = 0 ; else level2 = 0 ;
+}
 
+- (void)inputReceivedFromSoundcard:(AFSoundcard*)soundcard buffers:(float**)buffers numberOfBuffers:(int)n samples:(int)samples
+{
+//	[ outputSoundcard pushBuffers:buffers numberOfBuffers:n samples:samples rateScalar:[ soundcard rateScalar ] ] ;
+	
+    
+	
+	if ( n > 1 )
+    {
+        [ self updateVUMeter:levelIndicator1 buffer:buffers[0] samples:samples ];
+        [ self updateVUMeter:levelIndicator2 buffer:buffers[1] samples:samples ];
+        float avgRMS = ([self calculateRMS:buffers[0] samples:samples] + [self calculateRMS:buffers[1] samples:samples])/2.0;
+        [self setRMSMeter:avgRMS];
+	}
+    else if ( n > 0 )
+    {
+        [ self updateVUMeter:levelIndicator1 buffer:buffers[0] samples:samples ];
+        [ self zeroVUMeter:levelIndicator2 ];
+        float avgRMS = [self calculateRMS:buffers[0] samples:samples];
+        [self setRMSMeter:avgRMS];
+    }
+    else
+    {
+        [ self zeroVUMeter:levelIndicator1 ];
+        [ self zeroVUMeter:levelIndicator2 ];
+    }
+    
+    cycle = ( cycle + 1 )%4 ;
+    
+    
+}
+
+
+-(float)calculateRMS:(float*)buffer samples:(int)samples
+{
+    float sum;
+    for (int i = 0; i < samples; i++ )
+    {
+        float square = buffer[i]*buffer[i];
+        sum+=square;
+    }
+    float mean = sum/samples;
+    //float rms = sqrtf(mean);
+    float rms = mean;
+    return rms;
+}
 
 @end

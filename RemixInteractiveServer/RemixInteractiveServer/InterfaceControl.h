@@ -10,8 +10,9 @@
 #import "AppDelegate.h"
 #import "ColorGridView.h"
 #import "LightingCue.h"
+#import <AudioLibrary/AFLibrary.h>
 
-@interface InterfaceControl : NSObject
+@interface InterfaceControl : NSObject <AFSoundcardDelegate>
 {
     AppDelegate* delegate;
     
@@ -21,7 +22,12 @@
     IBOutlet NSTextField* elapsedTimeBox;
     IBOutlet NSTextField* jumpToBox;
     IBOutlet NSTextField* loadedFileBox;
-    
+    NSTimer *cueTimer;
+    NSDate *cueTimerStart;
+    int currentCue;
+    float pausedTime;
+    BOOL playingCues;
+    BOOL fileLoaded;
     NSMutableArray* lightingCues;
     
     //Lighting Cue Design
@@ -31,18 +37,32 @@
     IBOutlet NSTextField* alphaBox;
     IBOutlet ColorGridView* colorsView;
     IBOutlet NSTextField* flashTimeField;
-    
     IBOutlet NSTextField* editFrameTimeBox;
     IBOutlet NSTextField* editJumpToBox;
     
     
+    IBOutlet NSButton *audioInitButton;
     
-    NSTimer *cueTimer;
-    NSDate *cueTimerStart;
-    int currentCue;
-    float pausedTime;
-    BOOL playingCues;
-    BOOL fileLoaded;
+    IBOutlet NSSlider *volumeSlider0 ;
+	IBOutlet NSSlider *volumeSlider1 ;
+	IBOutlet NSSlider *volumeSlider2 ;
+	IBOutlet NSLevelIndicator *levelIndicator1 ;
+	IBOutlet NSLevelIndicator *levelIndicator2 ;
+
+    IBOutlet NSLevelIndicator *avgRMSIndicator ;
+    
+    IBOutlet NSLevelIndicator *rmsThreshReached;
+    IBOutlet NSSlider *rmsScale;
+	IBOutlet NSSlider *rmsPower;
+    IBOutlet NSSlider *rmsTail;
+    float prevDisplayRMS;
+    bool prevJawnFlash;
+    
+    
+	AFManager *manager ;
+	AFSoundcard *inputSoundcard, *outputSoundcard ;
+	float level1, level2 ;
+	int cycle ;
     
     
 }
@@ -68,6 +88,10 @@
 -(IBAction)editJumpToNextCue:(id)sender;
 -(IBAction)editSaveCue:(id)sender;
 -(IBAction)editSaveCurrentCueList:(id)sender;
+
+
+//Audio Shit
+-(IBAction)initAudio:(id)sender;
 
 
 @end

@@ -52,6 +52,10 @@
 		E7BFBF7519073F35006F4323 /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6A19073F35006F4323 /* Red.png */; };
 		E7BFBF7619073F35006F4323 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6B19073F35006F4323 /* White.png */; };
 		E7BFBF7719073F35006F4323 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6C19073F35006F4323 /* Yellow.png */; };
+		E7BFBF801908733E006F4323 /* AudioLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFBF7F1908733E006F4323 /* AudioLibrary.framework */; };
+		E7BFECAB190855B300F3EE59 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFECA8190855B300F3EE59 /* AudioToolbox.framework */; };
+		E7BFECAC190855B300F3EE59 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFECA9190855B300F3EE59 /* AudioUnit.framework */; };
+		E7BFECAD190855B300F3EE59 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFECAA190855B300F3EE59 /* CoreAudio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +185,10 @@
 		E7BFBF6A19073F35006F4323 /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
 		E7BFBF6B19073F35006F4323 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
 		E7BFBF6C19073F35006F4323 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
+		E7BFBF7F1908733E006F4323 /* AudioLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioLibrary.framework; path = ../../../../../../../../Library/Frameworks/AudioLibrary.framework; sourceTree = "<group>"; };
+		E7BFECA8190855B300F3EE59 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E7BFECA9190855B300F3EE59 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		E7BFECAA190855B300F3EE59 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +196,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7BFBF801908733E006F4323 /* AudioLibrary.framework in Frameworks */,
+				E7BFECAB190855B300F3EE59 /* AudioToolbox.framework in Frameworks */,
+				E7BFECAC190855B300F3EE59 /* AudioUnit.framework in Frameworks */,
+				E7BFECAD190855B300F3EE59 /* CoreAudio.framework in Frameworks */,
 				E7BFBF531906B01D006F4323 /* SocketRocket.framework in Frameworks */,
 				E714A21818FF0E7700D4BCB8 /* Cocoa.framework in Frameworks */,
 			);
@@ -229,6 +241,10 @@
 		E714A21618FF0E7700D4BCB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7BFBF7F1908733E006F4323 /* AudioLibrary.framework */,
+				E7BFECA8190855B300F3EE59 /* AudioToolbox.framework */,
+				E7BFECA9190855B300F3EE59 /* AudioUnit.framework */,
+				E7BFECAA190855B300F3EE59 /* CoreAudio.framework */,
 				E714A21718FF0E7700D4BCB8 /* Cocoa.framework */,
 				E714A23618FF0E7800D4BCB8 /* XCTest.framework */,
 				E714A21918FF0E7700D4BCB8 /* Other Frameworks */,
@@ -721,6 +737,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemixInteractiveServer/RemixInteractiveServer-Prefix.pch";
 				INFOPLIST_FILE = "RemixInteractiveServer/RemixInteractiveServer-Info.plist";
@@ -734,6 +755,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemixInteractiveServer/RemixInteractiveServer-Prefix.pch";
 				INFOPLIST_FILE = "RemixInteractiveServer/RemixInteractiveServer-Info.plist";
