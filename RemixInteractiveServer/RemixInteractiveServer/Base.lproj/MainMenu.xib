@@ -671,7 +671,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="800" height="600"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -682,7 +682,7 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" image="800x600" id="sGr-w3-ExS"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uTp-az-Lzk">
-                        <rect key="frame" x="470" y="413" width="37" height="23"/>
+                        <rect key="frame" x="469" y="412" width="37" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Scale" id="9nK-E7-IaI">
                             <font key="font" size="13" name="AvenirNext-Regular"/>
@@ -690,7 +690,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhq-p8-tZv">
-                        <rect key="frame" x="470" y="394" width="41" height="23"/>
+                        <rect key="frame" x="468" y="387" width="41" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Power" id="Mfp-Fq-Omu">
                             <font key="font" size="13" name="AvenirNext-Regular"/>
@@ -698,12 +698,12 @@
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2R-JM-atx">
-                        <rect key="frame" x="511" y="392" width="271" height="21"/>
+                        <rect key="frame" x="513" y="385" width="122" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <sliderCell key="cell" state="on" alignment="left" maxValue="5" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="J7o-5f-FSq"/>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iCP-p4-Kwz">
-                        <rect key="frame" x="470" y="374" width="24" height="23"/>
+                        <rect key="frame" x="469" y="362" width="24" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Tail" id="2Qs-cw-X7W">
                             <font key="font" size="13" name="AvenirNext-Regular"/>
@@ -711,22 +711,22 @@
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tA7-ov-M2i">
-                        <rect key="frame" x="511" y="372" width="271" height="21"/>
+                        <rect key="frame" x="513" y="362" width="122" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="fcd-xa-JWO"/>
                     </slider>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-Do-Swm">
-                        <rect key="frame" x="511" y="411" width="271" height="21"/>
+                        <rect key="frame" x="510" y="410" width="125" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="200" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="li1-ss-7kF"/>
                     </slider>
                     <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="67o-Qw-gXB">
-                        <rect key="frame" x="513" y="433" width="267" height="23"/>
+                        <rect key="frame" x="513" y="433" width="120" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <levelIndicatorCell key="cell" alignment="left" maxValue="100" criticalValue="50" numberOfMajorTickMarks="3" numberOfTickMarks="11" levelIndicatorStyle="continuousCapacity" id="8iK-Em-U1w"/>
                     </levelIndicator>
                     <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXM-7y-Z4r">
-                        <rect key="frame" x="513" y="487" width="267" height="16"/>
+                        <rect key="frame" x="510" y="489" width="270" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <levelIndicatorCell key="cell" alignment="left" maxValue="100" warningValue="80" criticalValue="90" levelIndicatorStyle="continuousCapacity" id="u3Z-Xg-7uu"/>
                     </levelIndicator>
@@ -854,6 +854,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Audience Preview" id="SDb-dF-9cQ">
                             <font key="font" size="18" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0S6-kv-oii">
+                        <rect key="frame" x="490" y="336" width="92" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Beat" id="5ic-Pk-kId">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -1199,6 +1207,14 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYn-3b-6uL">
+                        <rect key="frame" x="644" y="438" width="35" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FFT4" id="8vT-e3-mZc">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAB-L3-7WK">
                         <rect key="frame" x="663" y="194" width="39" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1265,17 +1281,17 @@
                         </textFieldCell>
                     </textField>
                     <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZY-oy-yVm">
-                        <rect key="frame" x="513" y="534" width="267" height="16"/>
+                        <rect key="frame" x="510" y="536" width="270" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <levelIndicatorCell key="cell" alignment="left" maxValue="100" warningValue="80" criticalValue="90" levelIndicatorStyle="continuousCapacity" id="YCi-zE-IAS"/>
                     </levelIndicator>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wzY-qy-jaw">
-                        <rect key="frame" x="511" y="512" width="271" height="21"/>
+                        <rect key="frame" x="508" y="514" width="274" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <sliderCell key="cell" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" sliderType="linear" id="MxU-CM-0MJ"/>
                     </slider>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apL-eA-Sc7">
-                        <rect key="frame" x="511" y="465" width="271" height="21"/>
+                        <rect key="frame" x="508" y="467" width="274" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <sliderCell key="cell" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" sliderType="linear" id="d9h-Tn-B5f"/>
                     </slider>
@@ -1290,6 +1306,90 @@
                             <action selector="initAudio:" target="gPP-9n-XDf" id="9cg-fJ-yay"/>
                         </connections>
                     </button>
+                    <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdm-Qc-dHX">
+                        <rect key="frame" x="680" y="438" width="100" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <levelIndicatorCell key="cell" alignment="left" maxValue="4" warningValue="3" criticalValue="4" id="98j-7h-43E"/>
+                    </levelIndicator>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JvV-Hm-dYC">
+                        <rect key="frame" x="644" y="412" width="35" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FFT3" id="Oew-Ff-jug">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9G9-iD-6lS">
+                        <rect key="frame" x="680" y="412" width="100" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <levelIndicatorCell key="cell" alignment="left" maxValue="4" warningValue="3" criticalValue="4" id="uhV-KG-PaJ"/>
+                    </levelIndicator>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-2u-iNF">
+                        <rect key="frame" x="644" y="387" width="35" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FFT2" id="Ehi-3Z-EIR">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHJ-cI-gba">
+                        <rect key="frame" x="680" y="387" width="100" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <levelIndicatorCell key="cell" alignment="left" maxValue="4" warningValue="3" criticalValue="4" id="M6M-wL-5Tp"/>
+                    </levelIndicator>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRG-Gq-fmi">
+                        <rect key="frame" x="644" y="362" width="35" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FFT1" id="pwv-HI-e3T">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <levelIndicator verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egT-gq-JkC">
+                        <rect key="frame" x="680" y="362" width="100" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <levelIndicatorCell key="cell" alignment="left" maxValue="4" warningValue="3" criticalValue="4" id="dOG-KI-RG4"/>
+                    </levelIndicator>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qMd-fT-iYq">
+                        <rect key="frame" x="470" y="333" width="23" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="6Ub-7d-ctf">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                        </buttonCell>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mix-f6-vDS">
+                        <rect key="frame" x="568" y="336" width="92" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Flash" id="XIn-7A-EzW">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkY-VU-Xd9">
+                        <rect key="frame" x="548" y="333" width="23" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="MGq-EP-ZSZ">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                        </buttonCell>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dzi-Nz-UeG">
+                        <rect key="frame" x="664" y="337" width="92" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Use FFT" id="90m-vl-HGd">
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-Nf-8Vf">
+                        <rect key="frame" x="644" y="334" width="23" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="e8e-IY-kEr">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" size="13" name="AvenirNext-Regular"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
         </window>
@@ -1299,6 +1399,9 @@
                 <outlet property="audioInitButton" destination="eqw-pW-ukP" id="Tg5-gI-Cgp"/>
                 <outlet property="avgRMSIndicator" destination="67o-Qw-gXB" id="nLL-1w-l79"/>
                 <outlet property="blueBox" destination="owr-5b-p7v" id="jzJ-ot-MZ2"/>
+                <outlet property="checkBoxFFT" destination="JsW-Nf-8Vf" id="OnJ-po-omo"/>
+                <outlet property="checkBoxRMS" destination="qMd-fT-iYq" id="pp8-RK-lft"/>
+                <outlet property="checkBoxRMSFlash" destination="kkY-VU-Xd9" id="t5b-bw-Lhn"/>
                 <outlet property="colorsView" destination="SMP-le-GSn" id="g5f-z7-CsM"/>
                 <outlet property="editFrameTimeBox" destination="Jsn-ad-X5n" id="dHQ-Jr-Hyz"/>
                 <outlet property="editJumpToBox" destination="8Uq-ya-WyN" id="JGT-t0-yXo"/>
@@ -1310,6 +1413,10 @@
                 <outlet property="jumpToBox" destination="Q1r-PA-VwS" id="289-Uq-0ou"/>
                 <outlet property="levelIndicator1" destination="wZY-oy-yVm" id="gPp-8Y-Fkq"/>
                 <outlet property="levelIndicator2" destination="xXM-7y-Z4r" id="3Ez-2f-K7m"/>
+                <outlet property="levelIndicatorFFT1" destination="egT-gq-JkC" id="eSi-wg-QES"/>
+                <outlet property="levelIndicatorFFT2" destination="hHJ-cI-gba" id="iWg-3x-WdU"/>
+                <outlet property="levelIndicatorFFT3" destination="9G9-iD-6lS" id="cHZ-NI-01O"/>
+                <outlet property="levelIndicatorFFT4" destination="sdm-Qc-dHX" id="foy-Qu-RGd"/>
                 <outlet property="loadedFileBox" destination="KCc-gl-W6u" id="kuI-8N-h8T"/>
                 <outlet property="redBox" destination="xbp-jA-e4X" id="aqH-jI-xhc"/>
                 <outlet property="rmsPower" destination="k2R-JM-atx" id="vOq-74-xkO"/>

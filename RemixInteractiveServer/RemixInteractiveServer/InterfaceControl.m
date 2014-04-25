@@ -191,6 +191,7 @@ int cnt;
     NSString* timeCodeStr = [editFrameTimeBox stringValue];
     NSString* cueString = @"";
     NSString* fullColorsList = @"";
+    
     for(ColorView* cv in colorsView.viewList)
     {
         float r = cv.color.redComponent;
@@ -204,8 +205,8 @@ int cnt;
     cueString = [NSString stringWithFormat:@"%d|%@|%@",currentEditCue,timeCodeStr,fullColorsList];
     
     LightingCue* tempCue = [[LightingCue alloc] initWithString:cueString];
-    
     [lightingCues replaceObjectAtIndex:(currentEditCue-1) withObject:tempCue];
+    
     
     
     
@@ -213,6 +214,90 @@ int cnt;
 -(IBAction)editSaveCurrentCueList:(id)sender
 {
     // Save the current cues list to a text file.
+    
+    //EDIT The cue in the list.
+    //Update the current file.
+    
+    NSString* fullCuesString = @"";
+    
+    for(int i = 0; i<[lightingCues count];i++)
+    {
+        int currentEditCue = i+1;
+
+        NSString* elapsedMinsStr;
+        NSString* elapsedSecsStr;
+        NSString* elapsedMSecsStr;
+        
+        if(((LightingCue*)[lightingCues objectAtIndex:i]).mins<9)
+            elapsedMinsStr = [NSString stringWithFormat:@"0%d",((LightingCue*)[lightingCues objectAtIndex:i]).mins];
+        else
+            elapsedMinsStr = [NSString stringWithFormat:@"%d",((LightingCue*)[lightingCues objectAtIndex:i]).mins];
+        
+        if(((LightingCue*)[lightingCues objectAtIndex:i]).secs<9)
+            elapsedSecsStr = [NSString stringWithFormat:@"0%d",((LightingCue*)[lightingCues objectAtIndex:i]).secs];
+        else
+            elapsedSecsStr = [NSString stringWithFormat:@"%d",((LightingCue*)[lightingCues objectAtIndex:i]).secs];
+        
+        if(((LightingCue*)[lightingCues objectAtIndex:i]).msecs<9)
+            elapsedMSecsStr = [NSString stringWithFormat:@"00%d",((LightingCue*)[lightingCues objectAtIndex:i]).msecs];
+        else if(((LightingCue*)[lightingCues objectAtIndex:i]).msecs<99)
+            elapsedMSecsStr = [NSString stringWithFormat:@"0%d",((LightingCue*)[lightingCues objectAtIndex:i]).msecs];
+        else
+            elapsedMSecsStr = [NSString stringWithFormat:@"%d",((LightingCue*)[lightingCues objectAtIndex:i]).msecs];
+        
+        NSString* timeCodeStr = [NSString stringWithFormat:@"%@:%@:%@",elapsedMinsStr,elapsedSecsStr,elapsedMSecsStr];
+        
+        NSString* cueString = @"";
+        NSString* fullColorsList = @"";
+        
+        
+        for(ShittyColor* sc in ((LightingCue*)[lightingCues objectAtIndex:i]).rgbValues)
+        {
+            float r = sc.red;
+            float g = sc.green;
+            float b = sc.blue;
+            float a = sc.alpha;
+            NSString* jawnStr = [NSString stringWithFormat:@"{%f,%f,%f,%f}",r,g,b,a];
+            fullColorsList = [fullColorsList stringByAppendingString:jawnStr];
+        }
+        
+        cueString = [NSString stringWithFormat:@"%d|%@|%@\n",currentEditCue,timeCodeStr,fullColorsList];
+        fullCuesString = [fullCuesString stringByAppendingString:cueString];
+    }
+    
+    AppDelegate* d = (AppDelegate *) [[NSApplication sharedApplication] delegate];
+    NSSavePanel * savePanel = [NSSavePanel savePanel];
+    // Restrict the file type to whatever you like
+    [savePanel setAllowedFileTypes:[NSArray arrayWithObject:@"riQ"]];
+    // Set the starting directory
+    [savePanel beginSheetModalForWindow:d.window completionHandler:^(NSInteger result){
+        if (result == NSFileHandlingPanelOKButton) {
+            // Close panel before handling errors
+            [savePanel orderOut:self];
+            NSURL* tempJawn = [savePanel URL];
+            NSLog(@"Got Filepath: %@",[tempJawn path]);
+            NSArray* components = [[tempJawn path] componentsSeparatedByString:@"/"];
+            NSString* fullPath = @"";
+            for (int i = 0;i<[components count]-1 ; i++)
+            {
+                fullPath = [NSString stringWithFormat:@"%@%@/",fullPath,[components objectAtIndex:i]];
+                
+            }
+            NSLog(@"PATH:%@",fullPath);
+            NSString* fileName = [[NSString alloc] initWithString:[components objectAtIndex:([components count]-1)]];
+            NSLog(@"NAME: %@",fileName);
+            
+            NSString* fullFilePath = [NSString stringWithFormat:@"%@%@",fullPath,fileName];
+            // Save the array
+            NSError *error = nil;
+            [fullCuesString writeToFile:fullFilePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+            NSLog(@"Was there an Error: %@", error.localizedFailureReason);
+        }
+    }];
+
+    
+    
+    
 }
 
 
@@ -389,8 +474,11 @@ int cnt;
                 
                 for(NSString* str in allLinedStrings)
                 {
-                    LightingCue* tempCue = [[LightingCue alloc] initWithString:str];
-                    [lightingCues addObject:tempCue];
+                    if(![str isEqualToString:@""])
+                    {
+                        LightingCue* tempCue = [[LightingCue alloc] initWithString:str];
+                        [lightingCues addObject:tempCue];
+                    }
                     
                 }
                 NSLog(@"DATA LOADED");
@@ -514,9 +602,14 @@ int cnt;
 {
     int tempIndex = index-1;
     if(tempIndex >=([lightingCues count]-1))
-        tempIndex= ([lightingCues count]-2);
+        //tempIndex= ([lightingCues count]-2);
+        tempIndex = 0;
     if(tempIndex<0)
         tempIndex = 0;
+    
+    
+    currentCue = tempIndex+1;
+    
     
     LightingCue* tempCue = [lightingCues objectAtIndex:tempIndex];
     [frameNumBox setStringValue:tempCue.cueTagString];
@@ -614,14 +707,19 @@ int cnt;
         else
             elapsedMSecsStr = [NSString stringWithFormat:@"%d",elapsedMsecs];
         
-        [elapsedTimeBox setStringValue:[NSString stringWithFormat:@"%@:%@:%@",elapsedMinsStr,elapsedSecsStr,elapsedMSecsStr]];
-        float nextCueTime = (float)((LightingCue*)[lightingCues objectAtIndex:currentCue]).mins*60.0
-                            +   (float)((LightingCue*)[lightingCues objectAtIndex:currentCue]).secs
-                            +   (float)((LightingCue*)[lightingCues objectAtIndex:currentCue]).msecs/1000.0;
-        if(timeInterval>nextCueTime)
+        
+        if(currentCue<[lightingCues count])
         {
-            currentCue++;
-            [self presentCue:currentCue];
+            
+            [elapsedTimeBox setStringValue:[NSString stringWithFormat:@"%@:%@:%@",elapsedMinsStr,elapsedSecsStr,elapsedMSecsStr]];
+            float nextCueTime = (float)((LightingCue*)[lightingCues objectAtIndex:currentCue]).mins*60.0
+            +   (float)((LightingCue*)[lightingCues objectAtIndex:currentCue]).secs
+            +   (float)((LightingCue*)[lightingCues objectAtIndex:currentCue]).msecs/1000.0;
+            if(timeInterval>nextCueTime)
+            {
+                currentCue++;
+                [self presentCue:currentCue];
+            }
         }
         
     });
@@ -757,6 +855,8 @@ int cnt;
 //	[ outputSoundcard start ] ;
 	[ inputSoundcard start ] ;
     prevJawnFlash = NO;
+    movingMax = 0;
+    movingMin = 0;
 }
 
 - (void)updateVUMeter:(NSLevelIndicator*)indicator buffer:(float*)buffer samples:(int)samples
@@ -784,21 +884,176 @@ int cnt;
 }
 -(void) doSomethingWithRMS:(float)rmsJawn
 {
-    if(rmsJawn>50 && !prevJawnFlash)
-    {
-        [self jumpToNextCueManual];
-        prevJawnFlash = YES;
-    }
     
-    if(rmsJawn<50)
+    
+    if(checkBoxRMS.state==NSOnState)
     {
-        prevJawnFlash = NO;
+       if(rmsJawn>50 && !prevJawnFlash)
+        {
+            [self jumpToNextCueManual];
+            prevJawnFlash = YES;
+        }
+        
+        if(rmsJawn<50)
+        {
+            prevJawnFlash = NO;
             
+        }
+
     }
+    if(checkBoxRMSFlash.state==NSOnState)
+    {
+        AppDelegate* d = (AppDelegate *) [[NSApplication sharedApplication] delegate];
+        NSString* fullColorsList = @"";
+        
+        float alphaScale =rmsJawn/100.0;
+        for(int i = 0; i<16; i++)
+        {
+            float r = 1.0;
+            float g = 1.0;
+            float b = 1.0;
+            float a = alphaScale;
+            NSString* jawnStr = [NSString stringWithFormat:@"{%f,%f,%f,%f}",r,g,b,a];
+            fullColorsList = [fullColorsList stringByAppendingString:jawnStr];
+        }
+        NSLog(@"Sending: %@",fullColorsList);
+        [d sendMessage:fullColorsList];
+        
+    }
+
     
 }
 
+- (void)setFFTMeter:(float*)fft withSize:(int) fftSize
+{
+    fftSize = fftSize/2;
+    float meters[4] = {0,0,0,0};
+    for(int i = 0;i<fftSize;i++)
+    {
+        fft[i] = 10*log10f(fft[i]); //dB
+        if(i<fftSize*0.125)
+        {
+            meters[0]+=fft[i]*(1.0/(fftSize*0.125));
+        }
+        else if(i<fftSize*0.25)
+        {
+            meters[1]+=fft[i]*(1.0/(fftSize*0.125));
+        }
+        else if(i<fftSize*0.5)
+        {
+            meters[2]+=fft[i]*(1.0/(fftSize*0.25));
+        }
+        else
+        {
+            meters[3]+=fft[i]*(1.0/(fftSize*0.5));
+        }
+//        NSLog(@"I: %d   FFT:%f",i,fft[i]);
+        
+    }
+    
+    
+    float min = 1000000.0;
+    for(int i = 0; i<4;i++)
+    {
+        if(meters[i]<min)
+            min = meters[i];
+    }
+    for(int i = 0; i<4;i++)
+    {
+        meters[i]-=movingMin;
+    }
+    movingMin = movingMin*(.9) + min*(.1);
+    
+    
+    float max = -1000000.0;
+    for(int i = 0; i<4;i++)
+    {
+        if(meters[i]>max)
+            max = meters[i];
+    }
+    movingMax = movingMax*(.9) + max*(.1);
+    
+    for(int i = 0; i<4;i++)
+    {
+        meters[i]/=movingMax;
+    }
+    
+    [levelIndicatorFFT1 setIntValue:meters[0]*4];
+    [levelIndicatorFFT2 setIntValue:meters[1]*4];
+    [levelIndicatorFFT3 setIntValue:meters[2]*4];
+    [levelIndicatorFFT4 setIntValue:meters[3]*4];
+    
+    [self doSomethingWithFFT:meters];
+}
 
+-(void) doSomethingWithFFT:(float[])meters
+{
+    if(checkBoxFFT.state == NSOnState)
+    {
+        AppDelegate* d = (AppDelegate *) [[NSApplication sharedApplication] delegate];
+        NSString* fullColorsList = @"";
+        for(int i = 0; i<16;i++)
+        {
+            int meterIndex = fmodf(i, 4);
+            
+            float r = 0.0;
+            float g = 0.0;
+            float b = 0.0;
+            float a = 1.0;
+            
+            if(i<4)
+            {
+                if(meters[meterIndex]>=1)
+                {
+                    r = 1.0;
+                    g = 0.0;
+                    b = 0.0;
+                    a = 1.0;
+                }
+            }
+            else if(i<8)
+            {
+                if(meters[meterIndex]>=0.75)
+                {
+                    r = 1.0;
+                    g = 1.0;
+                    b = 0.0;
+                    a = 1.0;
+                }
+                
+            }
+            else if(i<12)
+            {
+                if(meters[meterIndex]>=0.5)
+                {
+                    r = 0.0;
+                    g = 1.0;
+                    b = 0.0;
+                    a = 1.0;
+                }
+            }
+            else
+            {
+                if(meters[meterIndex]>=0.25)
+                {
+                    r = 0.0;
+                    g = 1.0;
+                    b = 0.0;
+                    a = 1.0;
+                }
+                
+            }
+            
+            
+            
+            
+            NSString* jawnStr = [NSString stringWithFormat:@"{%f,%f,%f,%f}",r,g,b,a];
+            fullColorsList = [fullColorsList stringByAppendingString:jawnStr];
+        }
+        NSLog(@"Sending: %@",fullColorsList);
+        [d sendMessage:fullColorsList];
+    }
+}
 
 - (void)zeroVUMeter:(NSLevelIndicator*)indicator
 {
@@ -811,13 +1066,24 @@ int cnt;
 //	[ outputSoundcard pushBuffers:buffers numberOfBuffers:n samples:samples rateScalar:[ soundcard rateScalar ] ] ;
 	
     
-	
+	SimpleFFT* fftJawn = [[SimpleFFT alloc] init];
+    [fftJawn fftSetSize:512];
+    
 	if ( n > 1 )
     {
         [ self updateVUMeter:levelIndicator1 buffer:buffers[0] samples:samples ];
         [ self updateVUMeter:levelIndicator2 buffer:buffers[1] samples:samples ];
         float avgRMS = ([self calculateRMS:buffers[0] samples:samples] + [self calculateRMS:buffers[1] samples:samples])/2.0;
         [self setRMSMeter:avgRMS];
+        
+        float* singleChannel = (float*)calloc(samples, sizeof(float));
+        float* singleChannelFFT = (float*)calloc(samples, sizeof(float));
+        float* trashPhase = (float*)calloc(samples, sizeof(float));
+        [self convertToMono:buffers numberOfBuffers:n samples:samples outBuffer:singleChannel];
+        [fftJawn forwardWithStart:0 withBuffer:singleChannel magnitude:singleChannelFFT phase:trashPhase useWinsow:YES];
+        [self setFFTMeter:singleChannelFFT  withSize:samples];
+        free(trashPhase);
+        
 	}
     else if ( n > 0 )
     {
@@ -825,6 +1091,13 @@ int cnt;
         [ self zeroVUMeter:levelIndicator2 ];
         float avgRMS = [self calculateRMS:buffers[0] samples:samples];
         [self setRMSMeter:avgRMS];
+        
+        float* singleChannelFFT = (float*)calloc(samples, sizeof(float));
+        float* trashPhase = (float*)calloc(samples, sizeof(float));
+        [self convertToMono:buffers numberOfBuffers:n samples:samples outBuffer:buffers[0]];
+        [fftJawn forwardWithStart:0 withBuffer:buffers[0] magnitude:singleChannelFFT phase:trashPhase useWinsow:YES];
+        [self setFFTMeter:singleChannelFFT withSize:samples];
+        free(trashPhase);
     }
     else
     {
@@ -835,6 +1108,18 @@ int cnt;
     cycle = ( cycle + 1 )%4 ;
     
     
+}
+
+-(void)convertToMono:(float**)buffers numberOfBuffers:(int)n samples:(int)samples outBuffer:(float*)output
+{
+    for(int s = 0;s<samples;s++)
+    {
+        for(int b = 0;b<n;b++)
+        {
+            output[s]+=buffers[b][s];
+        }
+        output[s]/=n;
+    }
 }
 
 

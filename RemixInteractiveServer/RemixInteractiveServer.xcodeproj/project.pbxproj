@@ -53,6 +53,7 @@
 		E7BFBF7619073F35006F4323 /* White.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6B19073F35006F4323 /* White.png */; };
 		E7BFBF7719073F35006F4323 /* Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = E7BFBF6C19073F35006F4323 /* Yellow.png */; };
 		E7BFBF801908733E006F4323 /* AudioLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFBF7F1908733E006F4323 /* AudioLibrary.framework */; };
+		E7BFBF831909681F006F4323 /* SimpleFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BFBF821909681F006F4323 /* SimpleFFT.m */; };
 		E7BFECAB190855B300F3EE59 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFECA8190855B300F3EE59 /* AudioToolbox.framework */; };
 		E7BFECAC190855B300F3EE59 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFECA9190855B300F3EE59 /* AudioUnit.framework */; };
 		E7BFECAD190855B300F3EE59 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BFECAA190855B300F3EE59 /* CoreAudio.framework */; };
@@ -186,6 +187,8 @@
 		E7BFBF6B19073F35006F4323 /* White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = White.png; sourceTree = "<group>"; };
 		E7BFBF6C19073F35006F4323 /* Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yellow.png; sourceTree = "<group>"; };
 		E7BFBF7F1908733E006F4323 /* AudioLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioLibrary.framework; path = ../../../../../../../../Library/Frameworks/AudioLibrary.framework; sourceTree = "<group>"; };
+		E7BFBF811909681F006F4323 /* SimpleFFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFFT.h; sourceTree = "<group>"; };
+		E7BFBF821909681F006F4323 /* SimpleFFT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFFT.m; sourceTree = "<group>"; };
 		E7BFECA8190855B300F3EE59 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E7BFECA9190855B300F3EE59 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		E7BFECAA190855B300F3EE59 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -406,6 +409,8 @@
 				E7BFBF551906F824006F4323 /* LightingCue.m */,
 				E7BFBF571906FD87006F4323 /* ShittyColor.h */,
 				E7BFBF581906FD87006F4323 /* ShittyColor.m */,
+				E7BFBF811909681F006F4323 /* SimpleFFT.h */,
+				E7BFBF821909681F006F4323 /* SimpleFFT.m */,
 				E7BFBF5C190705E2006F4323 /* Custom UI Components */,
 			);
 			name = LightingCue;
@@ -585,6 +590,7 @@
 			files = (
 				E714A2B91900172B00D4BCB8 /* ColorView.m in Sources */,
 				E714A27B18FF0EE700D4BCB8 /* SBJson4Writer.m in Sources */,
+				E7BFBF831909681F006F4323 /* SimpleFFT.m in Sources */,
 				E7BFBF591906FD87006F4323 /* ShittyColor.m in Sources */,
 				E714A27018FF0EE700D4BCB8 /* SocketIO.m in Sources */,
 				E714A22B18FF0E7700D4BCB8 /* AppDelegate.m in Sources */,

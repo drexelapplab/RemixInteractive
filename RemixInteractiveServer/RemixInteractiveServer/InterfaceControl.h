@@ -11,6 +11,7 @@
 #import "ColorGridView.h"
 #import "LightingCue.h"
 #import <AudioLibrary/AFLibrary.h>
+#import "SimpleFFT.h"
 
 @interface InterfaceControl : NSObject <AFSoundcardDelegate>
 {
@@ -41,23 +42,34 @@
     IBOutlet NSTextField* editJumpToBox;
     
     
+    
+    //Audio Shit
     IBOutlet NSButton *audioInitButton;
     
-    IBOutlet NSSlider *volumeSlider0 ;
-	IBOutlet NSSlider *volumeSlider1 ;
-	IBOutlet NSSlider *volumeSlider2 ;
-	IBOutlet NSLevelIndicator *levelIndicator1 ;
-	IBOutlet NSLevelIndicator *levelIndicator2 ;
+	IBOutlet NSSlider *volumeSlider1;
+	IBOutlet NSSlider *volumeSlider2;
+	IBOutlet NSLevelIndicator *levelIndicator1;
+	IBOutlet NSLevelIndicator *levelIndicator2;
 
-    IBOutlet NSLevelIndicator *avgRMSIndicator ;
+    IBOutlet NSLevelIndicator *avgRMSIndicator;
     
-    IBOutlet NSLevelIndicator *rmsThreshReached;
     IBOutlet NSSlider *rmsScale;
 	IBOutlet NSSlider *rmsPower;
     IBOutlet NSSlider *rmsTail;
     float prevDisplayRMS;
     bool prevJawnFlash;
     
+    
+    IBOutlet NSLevelIndicator *levelIndicatorFFT1;
+	IBOutlet NSLevelIndicator *levelIndicatorFFT2;
+    IBOutlet NSLevelIndicator *levelIndicatorFFT3;
+	IBOutlet NSLevelIndicator *levelIndicatorFFT4;
+    float movingMin;
+    float movingMax;
+    
+    IBOutlet NSButton* checkBoxRMS;
+    IBOutlet NSButton* checkBoxRMSFlash;
+    IBOutlet NSButton* checkBoxFFT;
     
 	AFManager *manager ;
 	AFSoundcard *inputSoundcard, *outputSoundcard ;
